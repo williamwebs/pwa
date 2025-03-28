@@ -127,6 +127,7 @@ function InstallPrompt() {
 
   useEffect(() => {
     setIsIOS(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       /iPad|iPhone|iPod/.test(navigator.userAgent) && !(window as any).MSStream
     );
 
@@ -139,6 +140,7 @@ function InstallPrompt() {
     setIsStandalone(window.matchMedia("(display-mode: standalone)").matches);
 
     // Listen for install prompt (only on Android & Desktop)
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     window.addEventListener("beforeinstallprompt", (e: any) => {
       e.preventDefault();
       setInstallEvent(e);
@@ -188,7 +190,7 @@ function InstallPrompt() {
             {" "}
             ⎋{" "}
           </span>
-          and then "Add to Home Screen"
+          and then &quot;Add to Home Screen&quot;
           <span role="img" aria-label="plus icon">
             {" "}
             ➕{" "}

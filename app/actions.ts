@@ -14,7 +14,7 @@ let subscription: PushSubscription | null = null;
 export async function subscribeUser(sub: PushSubscription) {
   subscription = {
     endpoint: sub.endpoint,
-    keys: (sub as any).keys || {},
+    keys: (sub as PushSubscription).keys || {},
   } as PushSubscription;
   // In a production environment, you would want to store the subscription in a database
   // For example: await db.subscriptions.create({ data: sub })
