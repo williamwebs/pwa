@@ -76,7 +76,7 @@ const SettingsPage = () => {
     return <p>Push notifications are not supported in this browser.</p>;
   }
   return (
-    <div className="w-full h-screen flex items-center justify-center">
+    <div className="w-full h-full pt-20 flex items-center justify-center">
       {subscription ? (
         <div className="shadow max-w-xl p-4 rounded flex flex-col items-center space-y-2">
           <p>You are subscribed to push notifications.</p>

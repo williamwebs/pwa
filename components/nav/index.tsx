@@ -34,7 +34,7 @@ const NavigationBar = () => {
   return (
     <nav className="m-0 p-0">
       {/* mobile */}
-      <div className="absolute md:hidden bottom-0 left-0 shadow-lg bg-white w-full px-4 py-4 rounded-t-xl flex items-center justify-around">
+      <div className="absolute md:hidden bottom-0 left-0 shadow bg-gray-100 w-full px-4 py-4 rounded-t-xl flex items-center justify-around">
         {menuItems.map((item, index) => (
           <Link href={item.link} className="" key={index}>
             {item.icon}

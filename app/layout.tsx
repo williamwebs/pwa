@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import NavigationBar from "@/components/nav";
+import { InstallPrompt } from "@/components/prompt";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +29,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <InstallPrompt />
+        <NavigationBar />
+
+        <main className="w-screen h-full"> {children}</main>
       </body>
     </html>
   );
