@@ -35,8 +35,8 @@ const NavigationBar = () => {
     <nav className="m-0 p-0">
       {/* mobile */}
       <div className="absolute md:hidden bottom-0 left-0 shadow-lg bg-white w-full px-4 py-4 rounded-t-xl flex items-center justify-around">
-        {menuItems.map((item) => (
-          <Link href={item.link} className="">
+        {menuItems.map((item, index) => (
+          <Link href={item.link} className="" key={index}>
             {item.icon}
           </Link>
         ))}
@@ -48,9 +48,10 @@ const NavigationBar = () => {
           Logo
         </Link>
         <div className="flex items-center space-x-5">
-          {menuItems.map((item) => (
+          {menuItems.map((item, index) => (
             <Link
               href={item.link}
+              key={index}
               className="text-sm font-normal text-gray-800 uppercase"
             >
               {item.name}
