@@ -34,7 +34,7 @@ const NavigationBar = () => {
   return (
     <header className="m-0 p-0 header__bg h-screen">
       {/* mobile */}
-      <nav className="fixed md:hidden bottom-0 left-0 shadow bg-white/20 backdrop-blur w-full px-4 py-4 rounded-t-xl flex items-center justify-around z-10">
+      <nav className="fixed md:hidden bottom-0 left-0 shadow bg-gray-300/90 backdrop-blur w-full px-4 py-4 rounded-t-xl flex items-center justify-around z-10">
         {menuItems.map((item, index) => (
           <Link href={item.link} className="" key={index}>
             {item.icon}

@@ -56,20 +56,20 @@ export function InstallPrompt() {
           <div>
             {isAndroid && (
               <div className="flex items-center justify-between">
-                <p className="text-xs sm:text-sm">
+                <p className="text-[8px] sm:text-sm">
                   Click the install button below to install this app on your
                   android device.
                 </p>
                 <button
                   onClick={handleInstallClick}
-                  className="bg-blue-600 text-white text-sm p-2 rounded"
+                  className="bg-blue-600 text-white text-xs sm:text-sm p-2 rounded"
                 >
                   Install App
                 </button>
               </div>
             )}
             {isIOS && (
-              <p className="text-xs sm:text-sm">
+              <p className="text-[8px] sm:text-sm">
                 To install this app on your iOS device, tap the share button
                 <span role="img" aria-label="share icon">
                   {" "}
@@ -88,15 +88,15 @@ export function InstallPrompt() {
               </p>
             )}
             {/* isDesktop && installEvent && */}
-            {isDesktop && (
+            {isDesktop && installEvent && (
               <div className="flex items-center justify-between p-0 m-0">
-                <p className="text-xs sm:text-sm">
+                <p className="text-[8px] sm:text-sm">
                   Click the install button below to install this app on your
                   desktop.
                 </p>
                 <button
                   onClick={handleInstallClick}
-                  className="bg-blue-600 text-white text-sm p-2 px-4 rounded"
+                  className="bg-blue-600 text-white text-xs sm:text-sm p-2 px-4 rounded"
                 >
                   Install App
                 </button>
