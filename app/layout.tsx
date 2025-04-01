@@ -32,7 +32,7 @@ export default function RootLayout({
         <InstallPrompt />
         <NavigationBar />
 
-        <main className="w-screen h-full"> {children}</main>
+        <main className="w-screen"> {children}</main>
       </body>
     </html>
   );

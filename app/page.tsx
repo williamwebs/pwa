@@ -11,7 +11,9 @@ export default function Page() {
     <div className="relative w-full h-full p-4">
       <div className="w-full rounded flex items-center justify-between">
         <div>
-          <h2 className="text-xl font-semibold">Hello Chris!</h2>
+          <h2 className="text-base sm:text-lg md:text-xl font-semibold">
+            Hello Chris!
+          </h2>
         </div>
 
         <div className="flex items-center gap-2">
@@ -26,14 +28,17 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="sticky top-0 w-full h-fit z-10 bg-white p-2 flex items-center justify-between my-5">
-        <h3 className="font-semibold text-base sm:text-lg md:text-2xl">Products</h3>
+      {/* sticky */}
+      <div className="sticky top-1 w-full h-fit z-20 bg-white p-2 flex items-center gap-1.5 justify-between my-5">
+        <h3 className="font-semibold text-sm sm:text-lg md:text-2xl">
+          Products
+        </h3>
         {/* search bar */}
         <div className="flex items-stretch justify-between h-10 rounded relative">
           <input
             type="text"
             placeholder="Search for products"
-            className="border border-gray-100 rounded-l-3xl p-2 px-3 w-full text-base"
+            className="border border-gray-100 rounded-l-3xl p-2 px-3 w-full text-sm sm:text-base placeholder:text-sm"
           />
           <button className="bg-green-600 text-white p-2 w-10 rounded-r-3xl flex items-center justify-center">
             <FaSearch />
