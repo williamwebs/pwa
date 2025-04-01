@@ -27,9 +27,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen`}
       >
-        <InstallPrompt />
+        {/* <InstallPrompt /> */}
         <NavigationBar />
 
         <main className="w-screen h-full"> {children}</main>
