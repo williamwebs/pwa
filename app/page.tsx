@@ -4,7 +4,7 @@ import { FaSearch } from "react-icons/fa";
 import { products } from "@/constants/data";
 import Link from "next/link";
 import { IoAddOutline } from "react-icons/io5";
-import { GoHeart, GoHeartFill } from "react-icons/go";
+import { GoHeart } from "react-icons/go";
 
 export default function Page() {
   return (

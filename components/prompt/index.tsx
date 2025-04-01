@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useEffect, useState } from "react";
 
@@ -50,56 +50,58 @@ export function InstallPrompt() {
   };
 
   return (
-    <>
-      {!isStandalone && (
-        <div className="shadow p-1">
-          {isAndroid && (
-            <div className="flex items-center justify-between">
-              <p className="text-sm">
-                Click the install button below to install this app on your
-                android device.
-              </p>
-              <button
-                onClick={handleInstallClick}
-                className="bg-blue-600 text-white text-sm p-2 rounded"
-              >
-                Install App
-              </button>
-            </div>
-          )}
+    <section className="sticky top-0 bg-white/20 backdrop-blur">
+      <div className="container mx-auto p-1">
+        {!isStandalone && (
+          <div>
+            {isAndroid && (
+              <div className="flex items-center justify-between">
+                <p className="text-sm">
+                  Click the install button below to install this app on your
+                  android device.
+                </p>
+                <button
+                  onClick={handleInstallClick}
+                  className="bg-blue-600 text-white text-sm p-2 rounded"
+                >
+                  Install App
+                </button>
+              </div>
+            )}
 
-          {isIOS && (
-            <p>
-              To install this app on your iOS device, tap the share button
-              <span role="img" aria-label="share icon">
-                {" "}
-                ⎋{" "}
-              </span>
-              and then &quot;Add to Home Screen&quot;
-              <span role="img" aria-label="plus icon">
-                {" "}
-                ➕{" "}
-              </span>
-              .
-            </p>
-          )}
-
-          {isDesktop && installEvent && (
-            <div className="flex items-center justify-between p-0 m-0">
-              <p className="text-sm">
-                Click the install button below to install this app on your
-                desktop.
+            {isIOS && (
+              <p>
+                To install this app on your iOS device, tap the share button
+                <span role="img" aria-label="share icon">
+                  {" "}
+                  ⎋{" "}
+                </span>
+                and then &quot;Add to Home Screen&quot;
+                <span role="img" aria-label="plus icon">
+                  {" "}
+                  ➕{" "}
+                </span>
+                .
               </p>
-              <button
-                onClick={handleInstallClick}
-                className="bg-blue-600 text-white text-sm p-2 px-4 rounded"
-              >
-                Install App
-              </button>
-            </div>
-          )}
-        </div>
-      )}
-    </>
+            )}
+
+            {isDesktop && installEvent && (
+              <div className="flex items-center justify-between p-0 m-0">
+                <p className="text-sm">
+                  Click the install button below to install this app on your
+                  desktop.
+                </p>
+                <button
+                  onClick={handleInstallClick}
+                  className="bg-blue-600 text-white text-sm p-2 px-4 rounded"
+                >
+                  Install App
+                </button>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+    </section>
   );
 }

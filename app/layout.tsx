@@ -29,7 +29,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen`}
       >
-        {/* <InstallPrompt /> */}
+        <InstallPrompt />
         <NavigationBar />
 
         <main className="w-screen h-full"> {children}</main>
