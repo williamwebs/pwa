@@ -56,7 +56,7 @@ export function InstallPrompt() {
           <div>
             {isAndroid && (
               <div className="flex items-center justify-between">
-                <p className="text-sm">
+                <p className="text-xs sm:text-sm">
                   Click the install button below to install this app on your
                   android device.
                 </p>
@@ -68,26 +68,29 @@ export function InstallPrompt() {
                 </button>
               </div>
             )}
-
             {isIOS && (
-              <p>
+              <p className="text-xs sm:text-sm">
                 To install this app on your iOS device, tap the share button
                 <span role="img" aria-label="share icon">
                   {" "}
                   ⎋{" "}
                 </span>
                 and then &quot;Add to Home Screen&quot;
-                <span role="img" aria-label="plus icon">
+                <span
+                  role="img"
+                  aria-label="plus icon"
+                  onClick={handleInstallClick}
+                >
                   {" "}
                   ➕{" "}
                 </span>
                 .
               </p>
             )}
-
-            {isDesktop && installEvent && (
+            {/* isDesktop && installEvent && */}
+            {isDesktop && (
               <div className="flex items-center justify-between p-0 m-0">
-                <p className="text-sm">
+                <p className="text-xs sm:text-sm">
                   Click the install button below to install this app on your
                   desktop.
                 </p>
